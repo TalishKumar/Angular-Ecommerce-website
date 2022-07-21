@@ -7,11 +7,17 @@
   <h3>
     <!-- hover over a product name to see the bound name property value, 
       which is the product name plus the word "details" -->
-    <a [title]="product.name + ' details'">
-      <!-- Property binding [ ] lets you use the property value in a template expression -->
 
+       <!-- Property binding [ ] lets you use the property value in a template expression -->
+    <a
+      [title]="product.name + ' details'"
+    
+
+      [routerLink]="['/products', product.id]">
       {{ product.name }}
     </a>
+ <!-- a routerLink with the product.id as a parameter -->
+
   </h3>
 
   <!-- *ngIf directive so that Angular only creates the <p> element 
